@@ -8,7 +8,7 @@ class Person_Test extends TestCase {
 	/**
 	 * Testing of the add function
 	 *
-	 * @dataProvider get_name_provider
+	 * @dataProvider name_provider
 	 *
 	 * @return void
 	 */
@@ -19,11 +19,26 @@ class Person_Test extends TestCase {
 	}
 
 	/**
+	 * Testing of the add function
+	 *
+	 * @dataProvider name_provider
+	 *
+	 * @return void
+	 */
+	public function test_set_name( $name ) {
+		$person = new Person( 'RANDOM NAME' );
+
+		$person->set_name( $name );
+
+		$this->assertEquals( $name, $person->get_name() );
+	}
+
+	/**
 	 * Provider for the get name test
 	 *
 	 * @return array
 	 */
-	public function get_name_provider() {
+	public function name_provider() {
 		return [
 			[
 				'Tess T Persson'

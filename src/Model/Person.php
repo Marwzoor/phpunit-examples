@@ -32,4 +32,13 @@ class Person {
 		return $this->name;
 	}
 
+	/**
+	 * Set name
+	 *
+	 * @return void
+	 */
+	public function set_name( string $name ) {
+		$this->name = $name;
+	}
+
 }
