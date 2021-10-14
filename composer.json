@@ -1,0 +1,18 @@
+{
+    "name": "marwzoor/phpunit-examples",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Martin Werner",
+            "email": "carlmartinwerner@gmail.com"
+        }
+    ],
+	"autoload": {
+        "psr-4": {
+            "PHPUnit_Examples\\": "src/"
+        }
+    },
+    "require": {
+        "phpunit/phpunit": "^7"
+    }
+}
